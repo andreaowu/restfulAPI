@@ -59,6 +59,7 @@ html
       };
     
       socket.on('response', function(solution, type) {
+        console.log("response")
         if (type == "put" || type == "delete" || type == "update") {
             document.getElementById("response").innerHTML = solution
         } else {
@@ -68,6 +69,7 @@ html
       });
 
       socket.on('error', function(type) {
+        console.log("error")
         document.getElementById("response").innerHTML = type;
         $("#response").show();
       });

@@ -1,0 +1,73 @@
+!!!5
+html
+  script(src="/socket.io/socket.io.js")
+  script(type='text/javascript')
+      var socket = io.connect();
+
+  head
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js')
+  
+  body
+    header
+      h1 Welcome to RESTful Service!
+    
+    center
+        br br br 
+        h2(id="response")
+        br br br
+        <select id="view">
+        <option>Get all records</option>
+        <option>Get specific record</option>
+        <option>Put in a record</option>
+        <option>Update an existing record</option>
+        <option>Delete a record</option>
+        </select>
+        <br><br>
+        <table id="table">
+        <tr>
+        <td> Record ID:</td>
+        <td><input type = "text" id="id"> <br></td>
+        </tr>
+        <tr>
+        <td> Name:</td>
+        <td><input type = "text" id="name"> <br></td>
+        </tr>
+        </table>
+        <br>
+        <input type="submit" id="button"/>
+        <p id="response"></p>
+
+    script(type='text/javascript')
+      $("h2").hide();
+      document.getElementById("button").onclick = function() {
+        var e = document.getElementById("view");
+        var strUser = e.options[e.selectedIndex].text;
+        var id = document.getElementById('id').value;
+        var name = document.getElementById('name').value;
+        if (strUser == "Get all records") { 
+          socket.emit('getAll')
+        } else if (strUser == "Get specific record") { 
+          socket.emit('get', id)
+        } else if (strUser == "Put in a record") { 
+          socket.emit('put', id, name)
+        } else if (strUser == "Update an existing record") { 
+          socket.emit('update', id, name)
+        } else if (strUser == "Delete a record") { 
+          socket.emit('delete', id)
+        }
+      };
+    
+      socket.on('response', function(solution, type) {
+        if (type == "put" || type == "delete" || type == "update") {
+            document.getElementById("response").innerHTML = solution
+        } else {
+            document.getElementById("response").innerHTML = JSON.stringify(solution);
+        }
+        $("#response").show();
+      });
+
+      socket.on('error', function(type) {
+        document.getElementById("response").innerHTML = type;
+        $("#response").show();
+      });

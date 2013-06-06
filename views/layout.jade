@@ -3,6 +3,10 @@ html
   script(src="/socket.io/socket.io.js")
   script(type='text/javascript')
       var socket = io.connect();
+      io.configure(function () { 
+        io.set("transports", ["xhr-polling"]); 
+        io.set("polling duration", 10); 
+      });
 
   head
     link(rel='stylesheet', href='/stylesheets/style.css')

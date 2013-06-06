@@ -7,6 +7,10 @@ var app = express();
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 
+io.configure(function () { 
+      io.set("transports", ["xhr-polling"]); 
+        io.set("polling duration", 10); 
+});
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
     host     : 'andreadb.cndfbjruyuqe.us-east-1.rds.amazonaws.com',

@@ -11,14 +11,19 @@ APIs
 -----
 <b>Get All Records</b>  
 Gets all records that are in the database and returns them.  
+
 <b>Get Record</b>   
 Gets a specific record specified the record ID.  
+
 <b>Put Record</b>  
-Stores a record with the specified record ID and name for later access. 
+Stores a record with the specified record ID and name for later access.  
+
 <b>Update Record</b>  
 Updates a record already saved with the specified record ID and the new name for the record ID.  
+
 <b>Delete Record</b>  
-Deletes a record with the specified record ID.  
+Deletes a record with the specified record ID.  :w
+
 
 Files
 -----

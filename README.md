@@ -7,10 +7,16 @@ To deploy this locally, download Node.js here: http://nodejs.org/download/. Clon
 
     node app.js
 
+APIs
+-----
+<b>Get</b>
+<b>Get All</b>
+
+
 Files
 -----
-* app.js: Server side: database connections and calls; configuration for rendering files, choosing ports, and so on
-* /views/layout.jade: UI implementation and calling of the APIs using Javascript  
-* /public/stylesheets/style.css: CSS stylesheet for the UI  
+* <code>app.js</code>: Server side: database connections and calls; configuration for rendering files, choosing ports, and so on
+* <code>/views/layout.jade</code>: UI implementation and calling of the APIs using Javascript  
+* <code>/public/stylesheets/style.css</code>: CSS stylesheet for the UI  
 
 

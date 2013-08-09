@@ -9,9 +9,16 @@ To deploy this locally, download Node.js here: http://nodejs.org/download/. Clon
 
 APIs
 -----
-<b>Get</b>
-<b>Get All</b>
-
+<b>Get All Records</b>  
+Gets all records that are in the database and returns them.  
+<b>Get Record</b>   
+Gets a specific record specified the record ID.  
+<b>Put Record</b>  
+Stores a record with the specified record ID and name for later access. 
+<b>Update Record</b>  
+Updates a record already saved with the specified record ID and the new name for the record ID.  
+<b>Delete Record</b>  
+Deletes a record with the specified record ID.  
 
 Files
 -----

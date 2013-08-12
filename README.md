@@ -7,7 +7,9 @@ To deploy this locally, download Node.js here: http://nodejs.org/download/. Clon
 
     node app.js
 
-To view, open a browser and go to <code>localhost:3000</code>.
+To view, open a browser and go to <code>localhost:3000</code>.  
+
+If at any point the current RDS instance gets taken down, edit <code>app.js</code> lines 17-20 for information about the new database.
 
 APIs
 -----

@@ -14,9 +14,9 @@ io.configure(function () {
 
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
-    host     : 'rssdbinstance.cndfbjruyuqe.us-east-1.rds.amazonaws.com',
-    user     : 'anwu',
-    password : 'Aw2699a!',
+    host     : 'host',
+    user     : 'username',
+    password : 'password',
     database: 'innodb'
 });
 connection.connect();

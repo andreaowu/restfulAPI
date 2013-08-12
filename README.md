@@ -7,6 +7,8 @@ To deploy this locally, download Node.js here: http://nodejs.org/download/. Clon
 
     node app.js
 
+To view, open a browser and go to <code>localhost:3000</code>.
+
 APIs
 -----
 <b>Get All Records</b>  

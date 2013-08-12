@@ -17,7 +17,7 @@ var connection = mysql.createConnection({
     host     : 'host',
     user     : 'username',
     password : 'password',
-    database: 'innodb'
+    database: 'database_name'
 });
 connection.connect();
 

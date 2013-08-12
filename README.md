@@ -7,6 +7,8 @@ To deploy this locally, download Node.js here: http://nodejs.org/download/. Clon
 
     node app.js
 
+The current version will not work, because the MySQL database originally connected to this has been taken down. To change the database, go into <code>app.js</code> and change lines 17-20.  
+
 To view, open a browser and go to <code>localhost:3000</code>.
 
 APIs

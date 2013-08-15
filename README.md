@@ -34,5 +34,5 @@ Files
 * <code>app.js</code>: Server side: database connections and calls; configuration for rendering files, choosing ports, and so on
 * <code>/views/layout.jade</code>: UI implementation and calling of the APIs using Javascript  
 * <code>/public/stylesheets/style.css</code>: CSS stylesheet for the UI  
-
+* <code>package.json</code>: Metadata relevant to project; gives information to npm for project identification and dependency handling  
 
